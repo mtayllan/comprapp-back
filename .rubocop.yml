@@ -3,14 +3,6 @@ require:
   - rubocop-rspec
   - rubocop-performance
 
-AllCops:
-  Exclude:
-    - bin/**/*
-    - db/schema.rb
-    - db/migrate/*.rb
-    - node_modules/**/*
-    - tmp/**/*
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/SymbolArray:
@@ -18,7 +10,19 @@ Style/SymbolArray:
 Style/Documentation:
   Enabled: false
 
+Metrics/MethodLength:
+  Max: 20
+Metrics/AbcSize:
+  Enabled: false
+
 Layout/LineLength:
   Max: 150
 
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'bin/*'
 
