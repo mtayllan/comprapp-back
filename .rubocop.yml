@@ -1,0 +1,24 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - node_modules/**/*
+    - tmp/**/*
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 150
+
+
