@@ -1,15 +1,14 @@
 module Mutations
-  class AddItemMutation < Mutations::BaseMutation
+  class CreateAdminMutation < Mutations::BaseMutation
+    argument :name, String, required: true
     argument :email, String, required: true
     argument :password, String, required: true
 
     field :admin, Types::AdminType, null: true
-    field :errors, Array, null: true
+    field :errors, [String], null: true
 
-    def resolve(email:, password:)
-      check_authentication!
-
-      admin = Admin.new(email: email, password: password)
+    def resolve(email:, password:, name:)
+      admin = Admin.new(name: name, email: email, password: password)
 
       if admin.save
         { admin: admin }
