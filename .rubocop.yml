@@ -24,3 +24,10 @@ Metrics/AbcSize:
 
 Layout/LineLength:
   Max: 150
+
+Rails/CreateTableWithTimestamps:
+  Exclude:
+    - 'db/migrate/20200114144054_rolify_create_roles.rb'
+Rails/HasAndBelongsToMany:
+  Exclude:
+    - 'app/models/role.rb'
