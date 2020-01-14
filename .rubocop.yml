@@ -2,7 +2,12 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-performance
-
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'db/schema.rb'
+    - 'bin/*'
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/SymbolArray:
@@ -11,18 +16,11 @@ Style/Documentation:
   Enabled: false
 
 Metrics/MethodLength:
-  Max: 20
+  Max: 15
+  Exclude:
+    - 'db/migrate/*'
 Metrics/AbcSize:
   Enabled: false
 
 Layout/LineLength:
   Max: 150
-
-AllCops:
-  Exclude:
-    - 'spec/spec_helper.rb'
-    - 'spec/rails_helper.rb'
-    - 'db/schema.rb'
-    - 'db/migrate/*'
-    - 'bin/*'
-

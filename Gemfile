@@ -8,8 +8,8 @@ gem 'graphql' # Ruby implementation of GraphQL
 gem 'graphql_devise' # GraphQL interface on top of the Devise Token Auth (DTA) gem.
 gem 'pg', '>= 0.18', '< 2.0' # Pg is the Ruby interface to the PostgreSQL RDBMS
 gem 'puma', '~> 4.1' # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1' # Ruby on Rails
 gem 'rack-cors' # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
+gem 'rails', '~> 6.0.2', '>= 6.0.2.1' # Ruby on Rails
 gem 'sprockets', '~> 3' # Rack-based asset packaging system
 
 group :development, :test do
