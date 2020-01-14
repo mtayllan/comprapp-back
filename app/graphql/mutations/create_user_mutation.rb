@@ -9,7 +9,7 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(email:, password:, name:, role: :customer)
-      role = :customer unless current_user&.has_hole?(:admin) # avoid create customer if not an admin
+      role = :customer unless context[:current_user]&.has_role?(:admin) # avoid create customer if not an admin
 
       user = User.new(name: name, email: email, password: password)
       if user.save
