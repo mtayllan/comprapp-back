@@ -18,6 +18,7 @@ group :development, :test do
   gem 'database_cleaner' # Strategies for cleaning databases in Ruby. Can be used to ensure a clean state for testing.
   gem 'faker' # A library for generating fake data such as names, addresses, and phone numbers
   gem 'pry-byebug' # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution
+  gem 'rspec-graphql_matchers' # Collection of rspec matchers to test your graphQL api schema.
   gem 'rspec-rails' # rspec-rails is a testing framework for Rails 3+
   gem 'rubocop', require: false # Automatic Ruby code style checking tool
   gem 'rubocop-performance', require: false # A collection of RuboCop cops to check for performance optimizations in Ruby code

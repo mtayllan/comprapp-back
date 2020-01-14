@@ -3,10 +3,8 @@ module Types
     field :id, ID, null: false
     field :email, String, null: false
     field :name, String, null: false
-    field :roles, [Types::RoleType], null: false
+    field :roles, [Types::RoleType], null: true
 
-    def roles
-      object.roles
-    end
+    delegate :roles, to: :object
   end
 end
