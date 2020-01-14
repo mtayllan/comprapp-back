@@ -1,19 +1,19 @@
 module Mutations
-  class UpdateAdminMutation < Mutations::BaseMutation
+  class UpdateUserMutation < Mutations::BaseMutation
     argument :id, ID, required: true
     argument :name, String, required: false
     argument :email, String, required: true
     argument :password, String, required: false
 
-    field :admin, Types::AdminType, null: true
+    field :user, Types::UserType, null: true
     field :errors, [String], null: true
 
     def resolve(id:, email:, password: nil, name: :nil)
-      admin = Admin.find(id)
-      if admin.update({ email: email, password: password, name: name }.compact)
-        { admin: admin }
+      user = User.find(id)
+      if user.update({ email: email, password: password, name: name }.compact)
+        { user: user }
       else
-        { errors: admin.errors }
+        { errors: user.errors }
       end
     end
   end

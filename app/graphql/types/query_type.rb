@@ -1,12 +1,12 @@
 module Types
   class QueryType < Types::BaseObject
-    field :admins,
-          [Types::AdminType],
+    field :users,
+          [Types::UserType],
           null: false,
-          description: 'Returns a list of admins in the martian library'
+          description: 'Returns a list of users in the martian library'
 
-    def admins
-      Admin.all
+    def users
+      User.all
     end
   end
 end

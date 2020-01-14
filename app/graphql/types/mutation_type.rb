@@ -1,8 +1,8 @@
 module Types
   class MutationType < Types::BaseObject
-    # admin
-    field :create_admin, mutation: Mutations::CreateAdminMutation
-    field :update_admin, mutation: Mutations::UpdateAdminMutation
-    field :delete_admin, mutation: Mutations::DeleteAdminMutation
+    # user
+    field :create_user, mutation: Mutations::CreateuserMutation
+    field :update_user, mutation: Mutations::UpdateuserMutation
+    field :delete_user, mutation: Mutations::DeleteuserMutation
   end
 end

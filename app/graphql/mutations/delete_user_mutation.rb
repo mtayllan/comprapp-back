@@ -1,17 +1,17 @@
 module Mutations
-  class DeleteAdminMutation < Mutations::BaseMutation
+  class DeleteUserMutation < Mutations::BaseMutation
     argument :id, ID, required: true
 
     field :sucess, Boolean, null: false
     field :errors, [String], null: true
 
     def resolve(id:)
-      admin = Admin.find(id)
+      user = User.find(id)
 
-      if admin.destroy
+      if user.destroy
         { sucess: true }
       else
-        { errors: admin.errors.full_messages }
+        { errors: user.errors.full_messages }
       end
     end
   end

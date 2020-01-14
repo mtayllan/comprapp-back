@@ -1,19 +1,19 @@
 module Mutations
-  class CreateAdminMutation < Mutations::BaseMutation
+  class CreateUserMutation < Mutations::BaseMutation
     argument :name, String, required: true
     argument :email, String, required: true
     argument :password, String, required: true
 
-    field :admin, Types::AdminType, null: true
+    field :user, Types::UserType, null: true
     field :errors, [String], null: true
 
     def resolve(email:, password:, name:)
-      admin = Admin.new(name: name, email: email, password: password)
+      user = User.new(name: name, email: email, password: password)
 
-      if admin.save
-        { admin: admin }
+      if user.save
+        { user: user }
       else
-        { errors: admin.errors.full_messages }
+        { errors: user.errors.full_messages }
       end
     end
   end
