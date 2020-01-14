@@ -33,6 +33,7 @@ group :development do
   gem 'pry', '~> 0.12' # An IRB alternative and runtime developer console
   gem 'pry-rails', '~> 0.3' # Use Pry as your rails console
   gem 'spring' # Preloads your application so things like console, rake and tests run faster
+  gem 'spring-commands-rspec' # implements the rspec command for Spring.
   gem 'spring-watcher-listen', '~> 2.0.0' # This gem makes Spring watch the filesystem for changes using Listen rather than by polling the filesystem.
 end
 
