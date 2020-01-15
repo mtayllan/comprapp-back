@@ -6,6 +6,7 @@ class User < ApplicationRecord
   include DeviseTokenAuth::Concerns::User
 
   has_many :addresses, dependent: :destroy
+  has_many :orders, dependent: :restrict_with_error
 
   rolify # customer || admin
 
