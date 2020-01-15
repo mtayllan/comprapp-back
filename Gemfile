@@ -6,6 +6,7 @@ ruby '2.6.3'
 gem 'bootsnap', '>= 1.4.2', require: false # Boot large ruby/rails apps faster
 gem 'graphql' # Ruby implementation of GraphQL
 gem 'graphql_devise' # GraphQL interface on top of the Devise Token Auth (DTA) gem.
+gem 'money-rails', '~>1.12' # Integration of RubyMoney - Money with Rails
 gem 'pg', '>= 0.18', '< 2.0' # Pg is the Ruby interface to the PostgreSQL RDBMS
 gem 'puma', '~> 4.1' # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server
 gem 'rack-cors' # Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.
