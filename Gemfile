@@ -39,6 +39,6 @@ end
 
 group :test do
   gem 'factory_bot_rails' # factory_bot is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies
-  gem 'shoulda-matchers', require: false # Simple one-liner tests for common Rails functionality
+  gem 'shoulda-matchers' # Simple one-liner tests for common Rails functionality
   gem 'simplecov', require: false # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging
 end

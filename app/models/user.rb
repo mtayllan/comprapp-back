@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
+  has_many :addresses, dependent: :destroy
+
   rolify # customer || admin
 
   after_create :assign_default_role
