@@ -6,6 +6,7 @@ RSpec.describe OrderProduct, type: :model do
   it { is_expected.to belong_to(:order) }
   it { is_expected.to belong_to(:product) }
   it { is_expected.to monetize(:price_cents) }
+  it { is_expected.to validate_numericality_of(:amount).is_greater_than(0) }
 
   context 'when after create' do
     it 'has the same value of the product' do
