@@ -1,5 +1,5 @@
 module Mutations
-  class UpdateAddressMutation < Mutations::BaseMutation
+  class DeleteAddressMutation < Mutations::BaseMutation
     argument :id, ID, required: true
 
     field :success, Boolean, null: true
