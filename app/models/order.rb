@@ -14,6 +14,6 @@ class Order < ApplicationRecord
   private
 
   def compose_history
-    order_status_historics << OrderStatusHistoric.new(status: status) if (!id) || Order.find(id).status != status
+    order_status_historics << OrderStatusHistoric.new(status: status) if !id || Order.find(id).status != status
   end
 end
