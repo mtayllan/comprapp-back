@@ -6,13 +6,16 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(id:)
-      user = User.find(id)
+      return unauthorized unless verify_admin_authorization
 
+      user = User.find(id)
       if user.destroy
         { sucess: true }
       else
         { errors: user.errors.full_messages }
       end
+    rescue ActiveRecord::RecordNotFound
+      not_found
     end
   end
 end

@@ -19,6 +19,9 @@ Metrics/MethodLength:
   Max: 15
   Exclude:
     - 'db/migrate/*'
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/graphql/*/*'
 Metrics/AbcSize:
   Enabled: false
 
