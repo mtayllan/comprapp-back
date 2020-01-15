@@ -19,5 +19,15 @@ module Types
     field :createProduct, mutation: Mutations::CreateProductMutation
     field :updateProduct, mutation: Mutations::UpdateProductMutation
     field :deleteProduct, mutation: Mutations::DeleteProductMutation
+
+    # order
+    field :createOrder, mutation: Mutations::CreateOrderMutation
+    field :updateOrder, mutation: Mutations::UpdateOrderMutation
+    field :deleteOrder, mutation: Mutations::DeleteOrderMutation
+
+    # order product
+    field :createOrderProduct, mutation: Mutations::CreateOrderProductMutation
+    field :updateOrderProduct, mutation: Mutations::UpdateOrderProductMutation
+    field :deleteOrderProduct, mutation: Mutations::DeleteOrderProductMutation
   end
 end
