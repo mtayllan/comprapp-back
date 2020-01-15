@@ -7,4 +7,5 @@ RSpec.describe Types::UserType, type: :object do
   it { is_expected.to have_field(:name).of_type('String!') }
   it { is_expected.to have_field(:email).of_type('String!') }
   it { is_expected.to have_field(:roles).of_type('[Role!]') }
+  it { is_expected.to have_field(:addresses).of_type('[Address!]') }
 end
