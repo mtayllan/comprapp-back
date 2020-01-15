@@ -10,7 +10,8 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(street:, district:, number:, city:, complement: nil)
-      address = Address.new(user_id: context[:current_user].id, street: street, district: district, number: number, city: city, complement: complement)
+      current_user = context[:current_user]
+      address = Address.new(user_id: current_user.id, street: street, district: district, number: number, city: city, complement: complement)
       if address.save
         { address: address }
       else
