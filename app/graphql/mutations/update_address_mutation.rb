@@ -10,8 +10,8 @@ module Mutations
     field :address, Types::AddressType, null: true
     field :errors, [String], null: true
 
-    def resolve(id, args = {})
-      address = context[:current_user].addresses.find(id)
+    def resolve(args = {})
+      address = context[:current_user].addresses.find(args[:id])
       if address.update(args.compact)
         { address: address }
       else
