@@ -23,7 +23,6 @@ module Types
     # order
     field :createOrder, mutation: Mutations::CreateOrderMutation
     field :updateOrder, mutation: Mutations::UpdateOrderMutation
-    field :deleteOrder, mutation: Mutations::DeleteOrderMutation
 
     # order product
     field :createOrderProduct, mutation: Mutations::CreateOrderProductMutation

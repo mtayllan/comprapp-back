@@ -29,8 +29,9 @@ module Types
         Order.all
       elsif current_user&.has_role?(:customer)
         current_user.orders
+      else
+        []
       end
-      []
     end
   end
 end

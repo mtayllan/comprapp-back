@@ -3,7 +3,7 @@ module Types
     field :id, ID, null: false
     field :status, String, null: false
     field :user, Types::UserType, null: false
-    field :orderProducts, Types::OrderProductType, null: false
+    field :orderProducts, [Types::OrderProductType], null: false
     field :price, String, null: false
 
     def price
